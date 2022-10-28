@@ -12,11 +12,26 @@ class Home extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          Center(child: BlocBuilder<CounterBloc, CounterState>(
-            builder: (context, state) {
-              return Text('Counter Value ${state.counterValue}');
+          BlocListener<CounterBloc, CounterState>(
+            listener: (context, state) {
+              if (state is IncrementState) {
+                ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+                  content: Text('Successfully Increased'),
+                  duration: Duration(milliseconds: 300),
+                ));
+              } else if (state is DecrementState) {
+                ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+                  content: Text('Successfully Decreased'),
+                  duration: Duration(milliseconds: 300),
+                ));
+              }
             },
-          )),
+            child: Center(child: BlocBuilder<CounterBloc, CounterState>(
+              builder: (context, state) {
+                return Text('Counter Value ${state.counterValue}');
+              },
+            )),
+          ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
