@@ -1,15 +1,7 @@
-Stream<int> boatStream() async* {
-  for (int i = 1; i <= 10; i++) {
-    print('SENT boat no.${i.toString()}');
-    await Future.delayed(const Duration(seconds: 2));
-    yield i;
-  }
-}
+import 'package:flutter/material.dart';
 
-void main() async {
-  Stream<int> stream = boatStream();
+import '../app/app.dart';
 
-  stream.listen((receivedData) {
-    print('RECEIVED boat no.${receivedData.toString()}');
-  });
+void main(List<String> args) {
+  runApp(const MyApp());
 }
