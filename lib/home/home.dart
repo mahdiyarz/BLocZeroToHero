@@ -12,7 +12,8 @@ class Home extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          BlocListener<CounterBloc, CounterState>(
+          Center(
+              child: BlocConsumer<CounterBloc, CounterState>(
             listener: (context, state) {
               if (state is IncrementState) {
                 ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
@@ -26,12 +27,10 @@ class Home extends StatelessWidget {
                 ));
               }
             },
-            child: Center(child: BlocBuilder<CounterBloc, CounterState>(
-              builder: (context, state) {
-                return Text('Counter Value ${state.counterValue}');
-              },
-            )),
-          ),
+            builder: (context, state) {
+              return Text('Counter Value ${state.counterValue}');
+            },
+          )),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
