@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../bloc/bloc_imports.dart';
+
 class Home extends StatelessWidget {
   const Home({super.key});
 
@@ -10,13 +12,23 @@ class Home extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          const Center(child: Text('Counter Value')),
+          Center(child: BlocBuilder<CounterBloc, CounterState>(
+            builder: (context, state) {
+              return Text('Counter Value ${state.counterValue}');
+            },
+          )),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              ElevatedButton(onPressed: () {}, child: const Text('Increase')),
+              ElevatedButton(
+                  onPressed: () =>
+                      context.read<CounterBloc>().add(CounterIncrementEvent()),
+                  child: const Text('Increase')),
               const SizedBox(width: 10),
-              ElevatedButton(onPressed: () {}, child: const Text('Decrease')),
+              ElevatedButton(
+                  onPressed: () =>
+                      context.read<CounterBloc>().add(CounterDecrementEvent()),
+                  child: const Text('Decrease')),
             ],
           )
         ],
