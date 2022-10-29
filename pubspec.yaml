@@ -35,6 +35,8 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_bloc: ^8.1.1
+  hydrated_bloc: ^8.1.0
+  path_provider: ^2.0.11
 
 dev_dependencies:
   flutter_lints: ^2.0.0
