@@ -1,20 +1,23 @@
-import 'package:flutter/material.dart';
-import '../bloc/bloc_imports.dart';
-import 'package:path_provider/path_provider.dart';
+//* aj_flutter Course
 
-import '../app/app.dart';
+// import 'package:flutter/material.dart';
 
-void main(List<String> args) async {
-  WidgetsFlutterBinding.ensureInitialized();
+// import 'package:path_provider/path_provider.dart';
 
-  final storage = await HydratedStorage.build(
-      storageDirectory: await getApplicationDocumentsDirectory());
+// import 'aj_flutter/app/app.dart';
+// import 'aj_flutter/bloc/bloc_imports.dart';
 
-  HydratedBlocOverrides.runZoned(
-    () => runApp(const MyApp()),
-    storage: storage,
-    blocObserver: MyBlocObserver(),
-  );
+// void main(List<String> args) async {
+//   WidgetsFlutterBinding.ensureInitialized();
 
-  // Bloc.observer = MyBlocObserver();
-}
+//   final storage = await HydratedStorage.build(
+//       storageDirectory: await getApplicationDocumentsDirectory());
+
+//   HydratedBlocOverrides.runZoned(
+//     () => runApp(const MyApp()),
+//     storage: storage,
+//     blocObserver: MyBlocObserver(),
+//   );
+
+//   // Bloc.observer = MyBlocObserver();
+// }

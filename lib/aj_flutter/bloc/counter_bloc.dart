@@ -1,5 +1,6 @@
-import 'package:bloc_zero_to_hero/bloc/bloc_imports.dart';
 import 'package:equatable/equatable.dart';
+
+import 'bloc_imports.dart';
 
 part 'counter_event.dart';
 part 'counter_state.dart';
