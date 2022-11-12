@@ -25,7 +25,7 @@
 //* vandad_nahavandipoor Course
 
 import 'package:flutter/material.dart';
-import '../vandad_nahavandipoor/home_page.dart';
+import 'vandad_nahavandipoor/cubit_home_page.dart';
 
 void main(List<String> args) => runApp(const MyApp());
 
@@ -35,7 +35,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: HomePage(),
+      home: CubitHomePage(),
     );
   }
 }
