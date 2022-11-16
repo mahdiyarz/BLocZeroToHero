@@ -24,8 +24,10 @@
 
 //* vandad_nahavandipoor Course
 
+import 'package:bloc_zero_to_hero/aj_flutter/bloc/bloc_imports.dart';
 import 'package:flutter/material.dart';
-import 'vandad_nahavandipoor/cubit_home_page.dart';
+// import '../vandad_nahavandipoor/cubit_home_page.dart';
+import '../vandad_nahavandipoor/bloc_home_page.dart';
 
 void main(List<String> args) => runApp(const MyApp());
 
@@ -35,7 +37,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: CubitHomePage(),
+      home: BlocProvider(
+        create: (_) => PersonsBloc(),
+        child: BlocHomePage(),
+      ),
     );
   }
 }
