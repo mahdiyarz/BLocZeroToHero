@@ -28,6 +28,7 @@ import 'package:bloc_zero_to_hero/aj_flutter/bloc/bloc_imports.dart';
 import 'package:flutter/material.dart';
 // import '../vandad_nahavandipoor/cubit_home_page.dart';
 import '../vandad_nahavandipoor/bloc_home_page.dart';
+import 'vandad_nahavandipoor/bloc/persons_bloc.dart';
 
 void main(List<String> args) => runApp(const MyApp());
 
