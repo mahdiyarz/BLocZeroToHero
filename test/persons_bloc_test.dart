@@ -1,8 +1,10 @@
-import 'package:bloc_zero_to_hero/vandad_nahavandipoor/bloc/bloc_actions.dart';
-import 'package:bloc_zero_to_hero/vandad_nahavandipoor/bloc/person.dart';
-import 'package:bloc_zero_to_hero/vandad_nahavandipoor/bloc/persons_bloc.dart';
+import 'package:bloc_zero_to_hero/vandad_nahavandipoor/persons/bloc/bloc_actions.dart';
+import 'package:bloc_zero_to_hero/vandad_nahavandipoor/persons/bloc/person.dart';
+import 'package:bloc_zero_to_hero/vandad_nahavandipoor/persons/bloc/persons_bloc.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:bloc_test/bloc_test.dart';
+
+// TODO: note this test pattern
 
 const mockedPersons1 = [
   Person(age: 20, name: 'Foo'),
