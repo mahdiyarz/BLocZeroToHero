@@ -1,6 +1,5 @@
+import 'package:bloc_zero_to_hero/vandad_nahavandipoor/persons/bloc/person.dart';
 import 'package:flutter/foundation.dart' show immutable;
-
-import '/vandad_nahavandipoor/bloc/person.dart';
 
 // enum PersonUrl {
 //   persons1,
