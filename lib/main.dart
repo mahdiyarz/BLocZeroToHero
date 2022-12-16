@@ -26,6 +26,7 @@
 
 import 'package:bloc_zero_to_hero/vandad_nahavandipoor/login/apis/login_api.dart';
 import 'package:bloc_zero_to_hero/vandad_nahavandipoor/login/apis/notes_api.dart';
+import 'package:bloc_zero_to_hero/vandad_nahavandipoor/login/models.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 // import '../vandad_nahavandipoor/cubit_home_page.dart';
@@ -46,6 +47,7 @@ class MyApp extends StatelessWidget {
         create: (_) => AppBloc(
           loginApi: LoginApi(),
           notesApi: NotesApi(),
+          acceptableLoginHandle: const LoginHandle.fooBar(),
         ),
         child: LoginHomePage(),
       ),

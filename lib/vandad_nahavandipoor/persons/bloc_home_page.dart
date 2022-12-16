@@ -37,17 +37,24 @@ class BlocHomePage extends StatelessWidget {
           Row(
             children: [
               TextButton(
-                  onPressed: () {
-                    context.read<PersonsBloc>().add(const LoadPersonsAction(
-                        url: person1Url, loader: getPersons));
-                  },
-                  child: Text('get json #1')),
+                onPressed: () {
+                  context.read<PersonsBloc>().add(
+                        const LoadPersonsAction(
+                          url: person1Url,
+                          loader: getPersons,
+                        ),
+                      );
+                },
+                child: Text('get json #1'),
+              ),
               TextButton(
-                  onPressed: () {
-                    context.read<PersonsBloc>().add(
-                        LoadPersonsAction(url: person2Url, loader: getPersons));
-                  },
-                  child: Text('get json #2')),
+                onPressed: () {
+                  context.read<PersonsBloc>().add(
+                        LoadPersonsAction(url: person2Url, loader: getPersons),
+                      );
+                },
+                child: Text('get json #2'),
+              ),
             ],
           ),
           BlocBuilder<PersonsBloc, FetchResult?>(

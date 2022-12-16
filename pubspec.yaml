@@ -30,11 +30,13 @@ environment:
 # versions available, run `flutter pub outdated`.
 dependencies:
   bloc: ^8.1.0
+  collection: ^1.16.0
   cupertino_icons: ^1.0.2
   equatable: ^2.0.5
   flutter:
     sdk: flutter
   flutter_bloc: ^8.1.1
+  flutter_hooks: ^0.18.5+1
   hydrated_bloc: ^8.1.0
   # path_provider: ^2.0.11
 
