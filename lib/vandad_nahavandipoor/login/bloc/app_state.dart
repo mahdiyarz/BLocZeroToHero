@@ -10,7 +10,6 @@ class AppState {
   final Iterable<Note>? fetchedNotes;
 
   //* this is a default data
-  // TODO: note this
   const AppState.empty()
       : isLoading = false,
         loginErrors = null,

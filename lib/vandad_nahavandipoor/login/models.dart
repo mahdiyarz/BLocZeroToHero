@@ -33,5 +33,4 @@ class Note {
   String toString() => 'Note (title = $title)';
 }
 
-// TODO: note this pattern
 final mockNotes = Iterable.generate(3, (i) => Note(title: 'Note ${i + 1}'));
