@@ -24,14 +24,9 @@
 
 //* vandad_nahavandipoor Course
 
-import 'package:bloc_zero_to_hero/vandad_nahavandipoor/login/apis/login_api.dart';
-import 'package:bloc_zero_to_hero/vandad_nahavandipoor/login/apis/notes_api.dart';
-import 'package:bloc_zero_to_hero/vandad_nahavandipoor/login/models.dart';
+import 'package:bloc_zero_to_hero/vandad_nahavandipoor/show_pics/views/show_pics_home.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 // import '../vandad_nahavandipoor/cubit_home_page.dart';
-import 'vandad_nahavandipoor/login/bloc/app_bloc.dart';
-import 'vandad_nahavandipoor/login/login_home_page.dart';
 // import 'vandad_nahavandipoor/persons/bloc_home_page.dart';
 // import 'vandad_nahavandipoor/persons/bloc/persons_bloc.dart';
 
@@ -43,14 +38,19 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: BlocProvider(
-        create: (_) => AppBloc(
-          loginApi: LoginApi(),
-          notesApi: NotesApi(),
-          acceptableLoginHandle: const LoginHandle.fooBar(),
-        ),
-        child: LoginHomePage(),
-      ),
+      //? login project
+      // home: BlocProvider(
+      //   create: (_) => AppBloc(
+      //     loginApi: LoginApi(),
+      //     notesApi: NotesApi(),
+      //     acceptableLoginHandle: const LoginHandle.fooBar(),
+      //   ),
+      //   child: LoginHomePage(),
+      // ),
+
+      //? show pic project
+      title: 'Show pics',
+      home: const ShowPicsHome(),
     );
   }
 }
