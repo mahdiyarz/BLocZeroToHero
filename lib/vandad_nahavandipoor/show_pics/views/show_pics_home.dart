@@ -14,6 +14,7 @@ class ShowPicsHome extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Title'),
       ),
+      // TODO: note this widget
       body: AnnotatedRegion<SystemUiOverlayStyle>(
         value: SystemUiOverlayStyle.dark,
         child: MultiBlocProvider(

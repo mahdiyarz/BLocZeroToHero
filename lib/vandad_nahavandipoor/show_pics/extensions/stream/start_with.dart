@@ -7,6 +7,7 @@ extension StartWith<T> on Stream<T> {
     merge them:     | X ---------- X ---------- X
 */
 
+// TODO: note StreamGroup logic
   Stream<T> startWith(T value) => StreamGroup.merge(
         [
           this,
